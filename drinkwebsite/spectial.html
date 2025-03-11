@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themed Drink Boxes</title>
+  <link rel="stylesheet" href="special.css">
+</head>
+<body>
+  <header>
+    <h1>Themed Drink Boxes</h1>
+    <p>Curated drink boxes based on your personality and mood</p>
+    <div class="top-right-buttons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='cart.html'">Cart</button>
+      </div>
+  </header>
+  
+  <section class="boxes-container">
+    <div class="box" id="introverts-retreat">
+      <div class="box-image">
+        <img src="drinks\introvert-box.jpg" alt="Introvert's Retreat">
+      </div>
+      <h3>Introvert's Retreat</h3>
+      <p>Calming teas and a cozy mug to help you unwind and recharge.</p>
+      <ul>
+        <li>Chamomile Tea</li>
+        <li>Lavender Blend</li>
+        <li>Cozy Mug</li>
+      </ul>
+      <p class="price">₹1430</p>
+      <button class="add-to-cart" onclick="addToCart('Introvert Retreat', 1230)">Add to Cart</button>
+    </div>
+    
+    <div class="box" id="adventurers-pack">
+      <div class="box-image">
+        <img src="drinks\adventurer-box.jpg" alt="Adventurer's Pack">
+      </div>
+      <h3>Adventurer's Pack</h3>
+      <p>Exotic flavors and bold spices for your next adventure.</p>
+      <ul>
+        <li>Mango Passionfruit</li>
+        <li>Spicy Ginger Lemonade</li>
+        <li>Adventure Cup</li>
+      </ul>
+      <p class="price">₹1230</p>
+      <button class="add-to-cart" onclick="addToCart('Adventurer s Pack', 1230)">Add to Cart</button>
+    </div>
+    
+
+
+
+    <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\Caffeine Kickstarter.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>Caffeine Kickstarter</h3>
+        <p> Perfect for the go-getters who need an extra boost of energy. </p>
+        <ul>
+          <li>Protein Smoothie Mix</li>
+          <li>Matcha Green Tea</li>
+          <li>Travel Mug</li>
+        </ul>
+        <p class="price">₹1000</p>
+      <button class="add-to-cart" onclick="addToCart('Caffeine Kickstarter', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\Serenity Escape.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>Serenity Escape</h3>
+        <p>Relax and unwind with soothing herbal teas and calming drinks.</p>
+        <ul>
+          <li>Chamomile Tea</li>
+          <li>Peppermint Infusion</li>
+          <li>Honey Sticks</li>
+        </ul>
+        <p class="price">₹1100</p>
+      <button class="add-to-cart" onclick="addToCart('Serenity Escape', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\Tropical Bliss.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>Tropical Bliss</h3>
+        <p>A refreshing box full of exotic flavors that transport you to a tropical paradise.</p>
+        <ul>
+          <li>Pineapple Coconut Smoothie</li>
+          <li>Mango Tango Iced Tea </li>
+          <li>Fruit Cocktail Mix</li>
+        </ul>
+        <p class="price">₹1000</p>
+      <button class="add-to-cart" onclick="addToCart('Tropical Bliss', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\Winter Wonderland.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3> Winter Wonderland</h3>
+        <p>Warm up on chilly days with spiced drinks and cozy accessories</p>
+        <ul>
+          <li> Spiced Apple Cider  </li>
+          <li>Hot Chocolate Mix</li>
+          <li>Winter-themed Mug</li>
+        </ul>
+        <p class="price">₹1190</p>
+        <button class="add-to-cart" onclick="addToCart('Winter Wonderland', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\Mindful Moments.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>Mindful Moments</h3>
+        <p>A box designed for meditation and self-care. Includes calming drinks, essential oils, and a journal for a mindful experience.</p>
+        <ul>
+          <li>Lavender Tea</li>
+          <li>Journal</li>
+          <li>Green Detox Juice </li>
+        </ul>
+        <p class="price">₹1400</p>
+        <button class="add-to-cart" onclick="addToCart('Mindful Moments', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\Fitness Fuel.jpeg" alt="Adventurer's Pack">
+        </div>
+        <h3>Fitness Fuel</h3>
+        <p> Fuel your workout with healthy and hydrating drinks.</p>
+        <ul>
+          <li>Protein Shake Mix</li>
+          <li>Green Tea with Ginseng</li>
+          <li>Energy Bites</li>
+        </ul>
+        <p class="price">₹1530</p>
+        <button class="add-to-cart" onclick="addToCart('Fitness Fuel', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\ramen.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>Blush Bites Korean Snack Box</h3>
+        <p>The pink aesthetic gives it a cute, feminine, and trendy appeal, making it perfect for Korean food lovers and spicy food fans.</p>
+        <ul>
+          <li>Buldak spicy ramen</li>
+          <li>Cherry drink.</li>
+          <li>snaks</li>
+        </ul>
+        <p class="price">₹1200</p>
+        <button class="add-to-cart" onclick="addToCart('Blush Bites Korean Snack Box', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\purple.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>Purple Power Snack Box</h3>
+        <p>This box has a strong purple aesthetic, featuring various snacks and drinks that fit the color scheme.</p>
+        <ul>
+          <li>grape-flavored gummy candy</li>
+          <li>Pocky Almond Crush</li>
+          <li>energy drinks.</li>
+        </ul>
+        <p class="price">₹1430</p>
+        <button class="add-to-cart" onclick="addToCart('Purple Power Snack Box', 1230)">Add to Cart</button>
+      </div>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\red.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>red Power Snack Box</h3>
+        <p>This box has a strong red aesthetic, featuring various snacks and drinks that fit the color scheme.</p>
+        <ul>
+          <li>pringles</li>
+          <li>kitkat</li>
+          <li>energy drinks.</li>
+        </ul>
+        <p class="price">₹1130</p>
+        <button class="add-to-cart" onclick="addToCart('red Power Snack Box', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\brown.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>brown Power Snack Box</h3>
+        <p>This box has a strong brown aesthetic, featuring various snacks and drinks that fit the color scheme.</p>
+        <ul>
+          <li>pringles</li>
+          <li>chocochip drink</li>
+          <li>energy drinks.</li>
+        </ul>
+        <p class="price">₹1030</p>
+        <button class="add-to-cart" onclick="addToCart('brown Power Snack Box', 1230)">Add to Cart</button>
+      </div>
+
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\mugs.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3>Ribbon-Themed Mugs 🎀</h3>
+        <p>Add a touch of elegance and charm with our ribbon-themed mugs! Designed with delicate ribbons, bows, and pastel aesthetics, these mugs are perfect for girly, soft, and classy vibes. Ideal for gifting or treating yourself to something stylish!</p>
+        <p class="price">₹1000</p>
+        <button class="add-to-cart" onclick="addToCart('mugs', 1230)">Add to Cart</button>
+      </div>
+
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\mugs 4.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3> We Bare Bears-Themed Mugs 🐻🐼🐨</h3>
+        <p>Love the adorable bear brothers? Our We Bare Bears-themed mugs feature your favorite trio—Grizzly, Panda, and Ice Bear—bringing fun and warmth to your coffee time. Perfect for fans of the show and lovers of cute aesthetics!</p>
+        <p class="price">₹1330</p>
+        <button class="add-to-cart" onclick="addToCart('mugs 4', 1230)">Add to Cart</button>
+      </div>
+
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\mugs1.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3> Halloween-themed mugs</h3>
+        <p>Get into the spooky spirit with our Halloween-themed mugs set! Featuring eerie designs, haunted aesthetics, and glow-in-the-dark elements, these mugs are perfect for adding a touch of witchy vibes to your coffee or tea. Ideal for Halloween lovers and horror fans alike!</p>
+        <p class="price">₹1600</p>
+        <button class="add-to-cart" onclick="addToCart('mugs1', 1230)">Add to Cart</button>
+      </div>
+
+      <div class="box" id="adventurers-pack">
+        <div class="box-image">
+          <img src="drinks\mugs3.jpg" alt="Adventurer's Pack">
+        </div>
+        <h3> Cookie-Themed Mugs 🍪☕</h3>
+        <p>For all cookie lovers out there! Our cookie-themed mugs are designed with built-in cookie holders so you can dunk your favorite treat right in your cup! Perfect for cozy evenings and snack-time fun!.</p>
+        <p class="price">₹1030</p>
+        <button class="add-to-cart" onclick="addToCart('mugs3', 1230)">Add to Cart</button>
+      </div>
+
+    
+
+    <!-- Add more themed boxes here -->
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+        function addToCart(drink, price) {
+          const item = { name: drink, price: price };
+          cart.push(item);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert(drink + " added to cart!");
+        }
+      </script>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 Your Website Name</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

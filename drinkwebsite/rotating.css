@@ -1,0 +1,272 @@
+/* General Styling */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/* Card Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Card Styling */
+.card {
+    width: 200px;
+    height: 400px;
+    perspective: 1000px;
+    text-align: center;
+    position: relative;
+    animation: floatEffect 3s ease-in-out infinite; /* Floating Effect */
+}
+
+/* Floating Animation */
+@keyframes floatEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Hover Flip Effect */
+.card:hover .card-inner {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+/* Front & Back Sides */
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background: transparent;
+}
+
+.card-back {
+    background: transparent;
+    transform: rotateY(180deg);
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Caption Styling */
+.caption {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(252, 140, 140, 0.6);
+}
+
+/* Liquid Fill Effect */
+.liquid {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    height: 0%;
+    background: rgba(255, 69, 0, 0.7); /* Orange liquid */
+    transition: height 2s ease-in-out;
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
+}
+.personality-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.personality-card {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.personality-card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.personality-card p {
+    background: rgba(253, 252, 252, 0.719);
+    padding: 10px;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.personality-card:hover {
+    transform: scale(1.1);
+}
+
+.calm { background-color: #4A8F5A; }
+.edgy { background-color: #6B2780; }
+.playful { background-color: #C69B26; }
+.mysterious { background-color: #1A3D5C; }
+.wheel {
+    width: 500px;
+    height: 300px;
+    border-radius: 10%;
+    border: 5px solid white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 3s ease-out;
+}
+
+
+
+
+/* Wheel Centering */
+.wheel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheel div {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+}
+
+.section1 { background: #4A8F5A; transform: rotate(0deg) skewY(-30deg); }
+.section2 { background: #6B2780; transform: rotate(90deg) skewY(-30deg); }
+.section3 { background: #C69B26; transform: rotate(180deg) skewY(-30deg); }
+.section4 { background: #1A3D5C; transform: rotate(270deg) skewY(-30deg); }
+
+.pointer {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 40px;
+    background: red;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    border-bottom: 5px solid #000000;
+    overflow: hidden;
+}
+
+.human img {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+.obstacle img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes moveObstacle {
+    from { left: 100%; }
+    to { left: -60px; }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    background: rgb(132, 121, 131);
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: rgb(132, 121, 131);
+}

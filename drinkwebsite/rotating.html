@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotating Drink Cans</title>
+    <link rel="stylesheet" href="rotating.css">
+
+</head>
+<body>
+
+<h1>🍹 Choose Your Drink 🍹</h1>
+<button class="btn" onclick="window.location.href='index.html'">HOME</button>
+<audio id="popSound" src="sounds/pop.mp3"></audio>
+<audio id="fizzSound" src="sounds/fizz.mp3"></audio>
+
+<div class="container">
+    <!-- Drink 1 -->
+    <div class="card" onmouseover="playPop()" onclick="fillDrink(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="drinks/drink4.png" alt="Drink 1 Front">
+                <div class="liquid"></div>
+            </div>
+            <div class="card-back">
+                <img src="drinks/drink2.png" alt="Drink 1 Back">
+            </div>
+        </div>
+        <p class="caption">🔥 Fiery Citrus Blast</p>
+    </div>
+
+    <!-- Drink 2 -->
+    <div class="card" onmouseover="playPop()" onclick="fillDrink(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="drinks/drink2.png" alt="Drink 2 Front">
+                <div class="liquid"></div>
+            </div>
+            <div class="card-back">
+                <img src="drinks/drink3.png" alt="Drink 2 Back">
+            </div>
+        </div>
+        <p class="caption">💙 Ocean Breeze Cooler</p>
+    </div>
+
+    <!-- Drink 3 -->
+    <div class="card" onmouseover="playPop()" onclick="fillDrink(this)">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="drinks/drink3.png" alt="Drink 3 Front">
+                <div class="liquid"></div>
+            </div>
+            <div class="card-back">
+                <img src="drinks/drink4.png" alt="Drink 3 Back">
+            </div>
+        </div>
+        <p class="caption">🌿 Minty Fresh Zing</p>
+    </div>
+</div>
+<div class="personality-container">
+    <!-- Calm Intellectual -->
+    <div class="personality-card calm" onclick="showDrinkMessage('Calm Intellectual')">
+        <img src="img\personality1.jpg" alt="Calm Intellectual">
+        <p>📖 The Scholar's Brew - A soothing tea-infused drink.</p>
+    </div>
+
+    <!-- Edgy & Cool -->
+    <div class="personality-card edgy" onclick="showDrinkMessage('Edgy & Cool')">
+        <img src="img\personality2.jpg" alt="Edgy & Cool">
+        <p>🕶️ Midnight Thunder - A bold, dark soda with a kick.</p>
+    </div>
+
+    <!-- Playful & Energetic -->
+    <div class="personality-card playful" onclick="showDrinkMessage('Playful & Energetic')">
+        <img src="img\personality3.jpg" alt="Playful & Energetic">
+        <p>🎸 Rockin' Lemon Fizz - A citrus explosion with a fun twist.</p>
+    </div>
+
+    <!-- Whimsical & Mysterious -->
+    <div class="personality-card mysterious" onclick="showDrinkMessage('Whimsical & Mysterious')">
+        <img src="img\personality4.jpg" alt="Whimsical & Mysterious">
+        <p>🌙 Mystic Moon Elixir - A magical blend of exotic flavors.</p>
+    </div>
+</div>
+
+<h1>🎡 Spin the Wheel to Get Your Personality! 🎡</h1>
+    <div class="wheel-container">
+        <div class="pointer"></div>
+        <div class="wheel" id="wheel">
+            <div class="section1"></div>
+            <div class="section2"></div>
+            <div class="section3"></div>
+            <div class="section4"></div>
+        </div>
+    </div>
+    <button onclick="spinWheel()">SPIN</button>
+    <div class="result" id="result">Your personality will appear here!</div>
+
+
+
+
+
+<footer>
+    <div class="game-container">
+        <div class="human">
+            <img src="D:\new experiment\colab\New folder\NEW\img\man-gif-unscreen.gif" id="human-img" alt="Animated Human">
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="moveForward()">Move Forward</button>
+        <button onclick="jump()">Jump</button>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function playPop() {
+        document.getElementById("popSound").play();
+    }
+
+    function fillDrink(element) {
+        let liquid = element.querySelector('.liquid');
+        liquid.style.height = "80%"; // Filling effect
+        document.getElementById("fizzSound").play(); // Fizz sound
+    }
+    function showDrinkMessage(personality) {
+        alert(`You chose the ${personality} personality! Enjoy your drink! 🍹`);
+    }
+    function spinWheel() {
+        const wheel = document.getElementById('wheel');
+        let randomDegree = Math.floor(3600 + Math.random() * 360);
+        wheel.style.transform = `rotate(${randomDegree}deg)`;
+        
+        setTimeout(() => {
+            let finalDegree = randomDegree % 360;
+            let personality;
+            if (finalDegree >= 0 && finalDegree < 90) {
+                personality = "📖 Calm Intellectual";
+            } else if (finalDegree >= 90 && finalDegree < 180) {
+                personality = "🕶️ Edgy & Cool";
+            } else if (finalDegree >= 180 && finalDegree < 270) {
+                personality = "🎸 Playful & Energetic";
+            } else {
+                personality = "🌙 Mysterious & Whimsical";
+            }
+            document.getElementById('result').innerText = `You got: ${personality}!`;
+        }, 3000);
+    }
+
+    let positionX = 50;
+    let isJumping = false;
+    const human = document.getElementById("human-img");
+
+    function moveForward() {
+        positionX += 20;
+        human.style.transform = `translateX(${positionX}px)`;
+    }
+
+    function jump() {
+        if (!isJumping) {
+            isJumping = true;
+            human.style.transition = "transform 0.3s ease-out";
+            human.style.transform += ` translateY(-100px)`;
+            setTimeout(() => {
+                human.style.transform = `translateX(${positionX}px) translateY(0px)`;
+                isJumping = false;
+            }, 500);
+        }
+    }
+
+    
+        function createObstacle() {
+            const obstacle = document.createElement("div");
+            obstacle.classList.add("obstacle");
+            obstacle.innerHTML = `<img src="D:/new experiment/colab/New folder/NEW/drinks/drink4.png" alt="Obstacle">`;
+            obstacle.style.animation = "moveObstacle 4s linear infinite";
+            document.querySelector(".game-container").appendChild(obstacle);
+    
+            setTimeout(() => {
+                obstacle.remove();
+            }, 4000);
+        }
+    
+        setInterval(createObstacle, 3000);
+</script>
+
+</body>
+</html>

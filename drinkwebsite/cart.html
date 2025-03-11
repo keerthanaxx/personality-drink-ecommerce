@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link href="cart.css" rel="stylesheet">
+</head>
+<body>
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  <div class="cart-items" id="cart-items">
+    <!-- Cart Items will be dynamically added here -->
+  </div>
+  
+  <div class="cart-total">
+    <h3>Total: ₹<span id="cart-total">0</span></h3>
+  </div>
+
+  <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  <button class="remove-all-btn" onclick="clearCart()">Remove All</button>
+</div>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function displayCart() {
+    const cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price * item.quantity;
+      cartItems.innerHTML += `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <div class="item-details">
+            <p>${item.name}</p>
+            <span>₹${item.price}</span>
+            <span>Qty: ${item.quantity}</span>
+          </div>
+          <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        </div>
+      `;
+    });
+
+    document.getElementById("cart-total").innerText = total;
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+  }
+
+  function clearCart() {
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+  }
+
+  function checkout() {
+    alert("Order Placed Successfully!");
+    clearCart();
+  }
+
+  window.onload = displayCart;
+</script>
+</body>
+</html>

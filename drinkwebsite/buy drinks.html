@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drinks Showcase</title>
+  <link href="buy drinks.css" rel="stylesheet">
+</head>
+<body>
+<div class="top-right-buttons">
+  <button onclick="location.href='index.html'">Home</button>
+  <button onclick="location.href='register.html'">Register</button>
+  <button onclick="location.href='cart.html'">Cart</button>
+</div>
+
+<h1>Taste the Flavor Sensation</h1>
+<div class="container">
+
+  <div class="container">
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.6</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\lavender latte.png" alt="Lavender Latte">
+      <p>Lavender Latte</p>
+      <p class="description">A smooth blend of espresso and lavender syrup.</p>
+      <p class="price">₹180</p>
+      <button class="add-to-cart" onclick="addToCart('Lavender Latte', 180)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.6</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\lemon- ginger.png" alt="Lemon Ginger">
+      <p>Lemon Ginger</p>
+      <p class="description">Refreshing lemonade with a hint of ginger.</p>
+      <p class="price">₹150</p>
+      <button class="add-to-cart" onclick="addToCart('Lemon Ginger', 150)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.8</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\mango.png" alt="Mango Juice">
+      <p>Mango Juice</p>
+      <p class="description">Freshly squeezed sweet mango juice.</p>
+      <p class="price">₹200</p>
+      <button class="add-to-cart" onclick="addToCart('Mango Juice', 200)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.5</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\orange.png" alt="Orange Juice">
+      <p>Orange Juice</p>
+      <p class="description">Freshly squeezed orange juice for a vitamin boost.</p>
+      <p class="price">₹160</p>
+      <button class="add-to-cart" onclick="addToCart('Orange Juice', 160)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.7</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\rose milk.png" alt="Rose Milk">
+      <p>Rose Milk</p>
+      <p class="description">Chilled milk infused with rose syrup.</p>
+      <p class="price">₹170</p>
+      <button class="add-to-cart" onclick="addToCart('Rose Milk', 170)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.9</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\vanilla cold brew.png" alt="Vanilla Cold Brew">
+      <p>Vanilla Cold Brew</p>
+      <p class="description">Strong cold brew with vanilla flavor.</p>
+      <p class="price">₹220</p>
+      <button class="add-to-cart" onclick="addToCart('Vanilla Cold Brew', 220)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.8</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\watermelon.png" alt="Watermelon Juice">
+      <p>Watermelon Juice</p>
+      <p class="description">Cool and refreshing watermelon juice.</p>
+      <p class="price">₹180</p>
+      <button class="add-to-cart" onclick="addToCart('Watermelon Juice', 180)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.5</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\avacado.png" alt="Avocado Smoothie">
+      <p>Avocado Smoothie</p>
+      <p class="description">Creamy avocado blended with honey.</p>
+      <p class="price">₹250</p>
+      <button class="add-to-cart" onclick="addToCart('Avocado Smoothie', 250)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 5</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\black coffee.png" alt="Black Coffee">
+      <p>Black Coffee</p>
+      <p class="description">Classic black coffee brewed to perfection.</p>
+      <p class="price">₹120</p>
+      <button class="add-to-cart" onclick="addToCart('Black Coffee', 120)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.9</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\blueberry.png" alt="Blueberry Juice">
+      <p>Blueberry Juice</p>
+      <p class="description">Sweet and tangy blueberry blend.</p>
+      <p class="price">₹210</p>
+      <button class="add-to-cart" onclick="addToCart('Blueberry Juice', 210)">Add to Cart</button>
+    </div>
+  
+    <div class="drink-card">
+      <span class="rating">⭐ 4.8</span>
+      <img src="D:\new experiment\colab\New folder\NEW\drinks\strawberry.png" alt="Strawberry Smoothie">
+      <p>Strawberry Smoothie</p>
+      <p class="description">Delicious blend of fresh strawberries and milk.</p>
+      <p class="price">₹230</p>
+      <button class="add-to-cart" onclick="addToCart('Strawberry Smoothie', 230)">Add to Cart</button>
+    </div>
+  
+  </div>
+  
+</body>
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function addToCart(drink, price) {
+    const item = { name: drink, price: price };
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(drink + " added to cart!");
+  }
+</script>

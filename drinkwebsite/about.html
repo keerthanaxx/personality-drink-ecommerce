@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Mood Mate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+<div class="about-container">
+  <h1>Welcome to <span class="logo-text">Mood Mate</span></h1>
+  <p class="typing-text">
+    Discover your <span class="highlight">MBTI</span> in Every Sip...
+  </p>
+  <p class="about-description">
+    Welcome to the ultimate destination for discovering the perfect drink tailored to your mood, personality, and MBTI type! 🍹✨ Here at Drink Demeanor✨, we believe that a drink can be more than just a beverage — it can be a reflection of who you are, how you feel, and what makes you unique. 🌟
+Whether you're an introverted INFJ craving a calm and soothing tea 🍵 or an energetic ENFP looking for a refreshing burst of flavor 🍋. Our carefully crafted selection of drinks is designed to match every personality type.
+Choose a drink that suits with your current state, and let it uplift your spirits. 🧘‍♀️💖With a visually stunning design and interactive features, our website makes it easy for you to explore and purchase your ideal drinks.
+    Mood Mate isn't just a website...  
+    It's where Personality meets Flavor!  
+    We believe every personality deserves its own drink 🌈.  
+    Select your MBTI Type and let us serve you the best drink that matches your inner self.
+  </p>
+
+  <div class="vibes">
+    <span>Anime 🌸</span>
+    <span>MBTI 🔥</span>
+    <span>Drinks 🍹</span>
+    <span>Vibes 🎶</span>
+  </div>
+
+
+  <div class="features">
+    <div class="feature-card">
+      <h3>🔮 MBTI-Based Drinks</h3>
+      <p>Every drink is tailored to your personality type.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🍹 Mood-Based Selection</h3>
+      <p>Feeling Happy, Sad, or Energetic? We got you covered!</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🌐 Cool Aesthetic Design</h3>
+      <p>Enjoy visually stunning & dynamic web experience.</p>
+    </div>
+  </div>
+
+  <button class="explore-btn" onclick="window.location.href='buy drinks.html'">Explore Drinks</button>
+</div>
+
+<script>
+  const text = ["Anime", "MBTI", "Aesthetics", "Vibes", "Drinks"];
+  let index = 0;
+  const highlight = document.querySelector('.highlight');
+
+  function typingEffect() {
+    highlight.innerHTML = text[index];
+    index = (index + 1) % text.length;
+  }
+
+  setInterval(typingEffect, 2000);
+</script>
+</body>
+</html>
