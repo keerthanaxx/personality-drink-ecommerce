@@ -9,3 +9,7 @@ This website is an e-commerce platform where you can explore and purchase drinks
 ✅ Seamless Shopping Experience – User-friendly navigation, secure checkout, and personalized recommendations.
 🛍️ Find your perfect drink and enjoy a sip that truly reflects YOU! 🍹
 💬 Contribute & Feedback: If you're interested in improving this website or have suggestions, feel free to connect! 
+                                                                                                                                THIS WEBSITE IS BASED OF THE FRONT-END 
+                                                                                                                                HTML
+                                                                                                                                CSS
+                                                                                                                                JAVASCRIPT
