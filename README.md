@@ -13,3 +13,4 @@ This website is an e-commerce platform where you can explore and purchase drinks
                                                                                                                                 HTML
                                                                                                                                 CSS
                                                                                                                                 JAVASCRIPT
+                                                                                                                                image credits to the pinterst 
